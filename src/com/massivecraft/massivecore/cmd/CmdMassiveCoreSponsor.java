@@ -3,6 +3,7 @@ package com.massivecraft.massivecore.cmd;
 import com.massivecraft.massivecore.MassiveCoreMConf;
 import com.massivecraft.massivecore.MassiveCorePerm;
 import com.massivecraft.massivecore.command.MassiveCommandToggle;
+import com.massivecraft.massivecore.command.Visibility;
 import com.massivecraft.massivecore.command.requirement.RequirementHasPerm;
 
 public class CmdMassiveCoreSponsor extends MassiveCommandToggle
@@ -20,11 +21,11 @@ public class CmdMassiveCoreSponsor extends MassiveCommandToggle
 	
 	public CmdMassiveCoreSponsor()
 	{
-		// Aliases
-		this.addAliases("sponsor");
-
 		// Requirements
 		this.addRequirements(RequirementHasPerm.get(MassiveCorePerm.SPONSOR));
+		
+		// VisibilityMode
+		this.setVisibility(Visibility.SECRET);
 	}
 	
 	// -------------------------------------------- //

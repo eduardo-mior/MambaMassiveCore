@@ -10,7 +10,7 @@ permissions:
 # THE REAL NODES
 # -------------------------------------------- #
 # cmd
-  massivecore.basecommand: {description: use the MassiveCore base command, default: false}
+  massivecore.basecommand: {description: use the MassiveCore base command, default: true}
   massivecore.test: {description: run developer test, default: false}
   massivecore.id: {description: see the server id, default: false}
   massivecore.hearsound: {description: hear a sound, default: false}
@@ -43,7 +43,7 @@ permissions:
   massivecore.cmdurl: {description: run all lines of url content, default: false}
   massivecore.config: {description: edit config, default: false}
   massivecore.sponsor: {description: toggle sponsor message, default: false}
-  massivecore.click: {description: click, default: false}
+  massivecore.click: {description: click, default: true}
   massivecore.version: {description: diplay plugin version, default: false}
 # misc
   massivecore.notpdelay: {description: teleport without delay, default: false}
@@ -137,9 +137,7 @@ permissions:
     default: false
     children:
       massivecore.basecommand: true
-      massivecore.hearsound: true
       massivecore.click: true
-      massivecore.version: true
   massivecore.kit.default:
     default: true
     children:

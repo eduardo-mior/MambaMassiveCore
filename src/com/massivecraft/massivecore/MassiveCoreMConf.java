@@ -38,7 +38,6 @@ public class MassiveCoreMConf extends Entity<MassiveCoreMConf>
 	// Base command aliases.
 	
 	public List<String> aliasesMcore = MUtil.list("massivecore");
-	public List<String> aliasesMstore = MUtil.list("massivestore");
 	
 	// -------------------------------------------- //
 	// GENERAL

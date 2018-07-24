@@ -16,8 +16,6 @@ public class CmdMassiveCoreHearsound extends MassiveCoreCommand
 	
 	public CmdMassiveCoreHearsound()
 	{
-		// Aliases
-		this.addAliases("hearsounds");
 		
 		// Parameters
 		this.addParameter(TypeList.get(TypeSoundEffect.get()), "sound(s)", true).setDesc("executa sons para ouvir");

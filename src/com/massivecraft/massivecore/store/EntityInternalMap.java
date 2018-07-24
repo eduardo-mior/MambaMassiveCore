@@ -16,12 +16,6 @@ public class EntityInternalMap<E extends EntityInternal<E>> extends EntityContai
 	// CONSTRUCT
 	// -------------------------------------------- //
 	
-	@SuppressWarnings("unused")
-	private EntityInternalMap()
-	{
-		this.entityClass = null;
-	}
-	
 	public EntityInternalMap(Class<E> entityClass)
 	{
 		this.entityClass = entityClass;

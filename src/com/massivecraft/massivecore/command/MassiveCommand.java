@@ -1102,7 +1102,6 @@ public class MassiveCommand implements Active, PluginIdentifiableCommand
 	// EXECUTOR
 	// -------------------------------------------- //
 	
-	@SuppressWarnings("unused")
 	public void execute(CommandSender sender, List<String> args)
 	{
 		try
@@ -1136,12 +1135,10 @@ public class MassiveCommand implements Active, PluginIdentifiableCommand
 				else
 				{
 					Mson base = null;
-					Collection<MassiveCommand> suggestions = null;
 					
 					if (matches.isEmpty())
 					{
 						base = Lang.COMMAND_CHILD_NONE;
-						suggestions = this.getChildren(token, true, sender, false);
 					}
 					else
 					{
