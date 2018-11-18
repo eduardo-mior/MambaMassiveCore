@@ -14,11 +14,11 @@ public abstract class TypeBooleanAbstract extends TypeAbstractChoice<Boolean>
 	// -------------------------------------------- //
 	
 	public static final String NAME_YES = "Sim";
-	public static final String NAME_TRUE = "Sim";
+	public static final String NAME_TRUE = "true";
 	public static final String NAME_ON = "On";
 	
 	public static final String NAME_NO = "Nao";
-	public static final String NAME_FALSE = "Nao";
+	public static final String NAME_FALSE = "false";
 	public static final String NAME_OFF = "off";
 	
 	public static final Set<String> NAMES_TRUE = new MassiveSet<>(

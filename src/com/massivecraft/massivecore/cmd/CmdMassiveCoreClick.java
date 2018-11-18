@@ -2,8 +2,8 @@ package com.massivecraft.massivecore.cmd;
 
 import com.massivecraft.massivecore.MassiveCoreMConf;
 import com.massivecraft.massivecore.MassiveException;
+import com.massivecraft.massivecore.command.Visibility;
 import com.massivecraft.massivecore.command.type.TypeStringCommand;
-import com.massivecraft.massivecore.mixin.MixinCommand;
 
 public class CmdMassiveCoreClick extends MassiveCoreCommand
 {
@@ -25,6 +25,8 @@ public class CmdMassiveCoreClick extends MassiveCoreCommand
 		
 		// Parameters
 		this.addParameter(null, TypeStringCommand.get(), "command", "none", true).setDesc("o comando para executar");
+		
+		this.setVisibility(Visibility.INVISIBLE);
 	}
 	
 	// -------------------------------------------- //
@@ -37,7 +39,7 @@ public class CmdMassiveCoreClick extends MassiveCoreCommand
 		MassiveCoreMConf.get().clickSound.run(me);
 		String command = this.readArg();
 		if (command == null) return;
-		MixinCommand.get().dispatchCommand(sender, command);
+		//MixinCommand.get().dispatchCommand(sender, command);
 	}
 	
 }

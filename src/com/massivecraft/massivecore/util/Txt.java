@@ -703,6 +703,7 @@ public class Txt
 		
 		// Make command line clicking
 		commandLine = CmdMassiveCore.get().cmdMassiveCoreClick.getCommandLine(commandLine);
+		commandLine = commandLine.replace("/massivecore click ", "").trim();
 
 		// Apply command
 		mson = mson.command(commandLine);
