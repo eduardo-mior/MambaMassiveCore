@@ -35,7 +35,7 @@ public abstract class ModificationPollerAbstract extends Thread
 				// We've been interrupted. Lets bail.
 				return;
 			}
-			catch (Exception e)
+			catch (Throwable e)
 			{
 				System.out.println("Poller error for" + this.getName());
 				e.printStackTrace();

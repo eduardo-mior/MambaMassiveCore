@@ -1397,7 +1397,7 @@ public enum ParticleEffect {
 				getHandle = ReflectionUtils.getMethod("CraftPlayer", PackageType.CRAFTBUKKIT_ENTITY, "getHandle");
 				playerConnection = ReflectionUtils.getField("EntityPlayer", PackageType.MINECRAFT_SERVER, false, "playerConnection");
 				sendPacket = ReflectionUtils.getMethod(playerConnection.getType(), "sendPacket", PackageType.MINECRAFT_SERVER.getClass("Packet"));
-			} catch (Exception exception) {
+			} catch (Throwable exception) {
 				throw new VersionIncompatibleException("Sua versao atual do bukkit parece ser incompativel com esta library", exception);
 			}
 			initialized = true;
@@ -1460,7 +1460,7 @@ public enum ParticleEffect {
 				ReflectionUtils.setValue(packet, true, "g", offsetZ);
 				ReflectionUtils.setValue(packet, true, "h", speed);
 				ReflectionUtils.setValue(packet, true, "i", amount);
-			} catch (Exception exception) {
+			} catch (Throwable exception) {
 				throw new PacketInstantiationException("Packet instantiation failed", exception);
 			}
 		}
@@ -1478,7 +1478,7 @@ public enum ParticleEffect {
 			initializePacket(center);
 			try {
 				sendPacket.invoke(playerConnection.get(getHandle.invoke(player)), packet);
-			} catch (Exception exception) {
+			} catch (Throwable exception) {
 				throw new PacketSendingException("Failed to send the packet to player '" + player.getName() + "'", exception);
 			}
 		}

@@ -62,7 +62,7 @@ public abstract class CommandEditContainerAbstract<O, V> extends CommandEditAbst
 		{
 			throw e;
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw new MassiveException().addMsg("§c%s", e.getMessage());
 		}

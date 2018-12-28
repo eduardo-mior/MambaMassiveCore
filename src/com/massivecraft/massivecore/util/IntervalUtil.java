@@ -18,7 +18,7 @@ public class IntervalUtil
 		{
 			return Double.valueOf(str);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			return def;
 		}
@@ -31,7 +31,7 @@ public class IntervalUtil
 		{
 			return Integer.valueOf(str);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			return def;
 		}

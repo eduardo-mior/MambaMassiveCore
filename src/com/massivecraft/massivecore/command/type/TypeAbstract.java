@@ -87,7 +87,7 @@ public abstract class TypeAbstract<T> implements Type<T>
 		{
 			constructor = ReflectionUtil.getConstructor(clazz);	
 		}
-		catch(Exception e)
+		catch(Throwable e)
 		{
 			
 		}
@@ -671,7 +671,7 @@ public abstract class TypeAbstract<T> implements Type<T>
 		{
 			return this.constructor.newInstance();
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			return null;
 		}

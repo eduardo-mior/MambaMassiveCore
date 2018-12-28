@@ -153,7 +153,7 @@ public class ExtractorLogic
 	public static World world(Location o) { return o.getWorld(); }
 	public static World world(Entity o) { return o.getWorld(); }
 	public static World world(PlayerEvent o) { return world(o.getPlayer()); }
-	public static World world(PS o) { try { return o.asBukkitWorld(true); } catch (Exception e) { return null; }}
+	public static World world(PS o) { try { return o.asBukkitWorld(true); } catch (Throwable e) { return null; }}
 	
 	public static World worldFromObject(Object o)
 	{

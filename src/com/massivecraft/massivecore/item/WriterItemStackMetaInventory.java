@@ -61,7 +61,7 @@ public class WriterItemStackMetaInventory extends WriterAbstractItemStackMetaFie
 			if (!(ret instanceof InventoryHolder)) return null;
 			return ((InventoryHolder) ret).getInventory().getContents();
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			// Catch errors such as: throw new IllegalStateException("Missing blockState for " + material);
 			return null;
@@ -85,7 +85,7 @@ public class WriterItemStackMetaInventory extends WriterAbstractItemStackMetaFie
 			if (!(ret instanceof InventoryHolder)) return;
 			inventory = ((InventoryHolder)ret).getInventory();
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			// Catch errors such as: throw new IllegalStateException("Missing blockState for " + material);
 			return;

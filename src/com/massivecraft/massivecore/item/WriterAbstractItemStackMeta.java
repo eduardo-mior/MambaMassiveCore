@@ -50,7 +50,7 @@ public abstract class WriterAbstractItemStackMeta<OB, CB, FA, FB> extends Writer
 			if ( ! (ret instanceof Banner)) return null;
 			return (Banner)ret;
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			// Catch errors such as: throw new IllegalStateException("Missing blockState for " + material);
 			return null;

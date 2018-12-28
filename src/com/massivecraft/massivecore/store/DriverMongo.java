@@ -63,7 +63,7 @@ public class DriverMongo extends DriverAbstract
 			dbMongo.db.dropDatabase();
 			return true;
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			return false;
 		}
@@ -317,7 +317,7 @@ public class DriverMongo extends DriverAbstract
 			}
 			return db;
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			//log(Level.SEVERE, "... mongo connection failed.");
 			e.printStackTrace();

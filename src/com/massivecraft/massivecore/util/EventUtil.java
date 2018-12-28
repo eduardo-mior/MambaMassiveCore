@@ -27,7 +27,7 @@ public class EventUtil
 			fieldRegisteredListenerDotListener = RegisteredListener.class.getDeclaredField("listener");
 			fieldRegisteredListenerDotListener.setAccessible(true);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			e.printStackTrace();
 		}
@@ -45,7 +45,7 @@ public class EventUtil
 				EventPriority thisPriority = (EventPriority) fieldRegisteredListenerDotPriority.get(registration);
 				if (thisPriority != priority) continue;
 			}
-			catch (Exception e)
+			catch (Throwable e)
 			{
 				e.printStackTrace();
 				continue;
@@ -74,7 +74,7 @@ public class EventUtil
 					Listener thisListener = (Listener) fieldRegisteredListenerDotListener.get(registration);
 					if (thisListener == listener && thisPriority == priority) run = true;
 				}
-				catch (Exception e)
+				catch (Throwable e)
 				{
 					e.printStackTrace();
 				}

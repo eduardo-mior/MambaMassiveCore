@@ -69,7 +69,7 @@ public class DiscUtil
 			write(file, content);
 			return true;
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			return false;
 		}

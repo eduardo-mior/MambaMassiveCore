@@ -34,7 +34,7 @@ public class FieldAccessorSimple implements FieldAccessor
 		{
 			return this.field.get(entity);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			e.printStackTrace();
 			return null;
@@ -47,7 +47,7 @@ public class FieldAccessorSimple implements FieldAccessor
 		{
 			this.field.set(entity, val);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			e.printStackTrace();
 		}

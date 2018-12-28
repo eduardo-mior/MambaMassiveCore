@@ -69,7 +69,7 @@ public class SimpleConfig
 				{
 					toShallowLoad = this.getClass().newInstance();
 				}
-				catch (Exception e)
+				catch (Throwable e)
 				{
 					e.printStackTrace();
 					return;

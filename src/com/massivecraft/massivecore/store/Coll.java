@@ -278,7 +278,7 @@ public class Coll<E extends Entity<E>> extends CollAbstract<E>
 			{
 				remoteEntry = this.getDb().load(this, id);
 			}
-			catch (Exception e)
+			catch (Throwable e)
 			{
 				logLoadError(id, e.getMessage());
 				return;
@@ -464,7 +464,7 @@ public class Coll<E extends Entity<E>> extends CollAbstract<E>
 		{
 			currentRaw = this.getGson().toJsonTree(entity, this.getEntityClass()).getAsJsonObject();
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			MassiveCore.get().log(Txt.parse("<b>Database examineHasLocalAlter failed convert current entity to JSON tree."));
 			MassiveCore.get().log(Txt.parse("<k>Error: <v>%s", e.getMessage()));
@@ -780,7 +780,7 @@ public class Coll<E extends Entity<E>> extends CollAbstract<E>
 		{
 			version = ReflectionUtil.getField(this.getEntityClass(), MigratorUtil.VERSION_FIELD_NAME, this.createNewInstance());
 		}
-		catch (Exception ex)
+		catch (Throwable ex)
 		{
 			// The field was not there
 		}

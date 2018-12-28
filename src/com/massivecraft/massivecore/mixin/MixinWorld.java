@@ -104,7 +104,7 @@ public class MixinWorld extends Mixin
 		{
 			location = spawnPs.asBukkitLocation(true);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			return;
 		}

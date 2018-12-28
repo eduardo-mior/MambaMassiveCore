@@ -77,7 +77,7 @@ public class TypePS extends TypeAbstract<PS>
 				double locationZ = TypeDouble.get().read(parts.get(3), sender);
 				return new PSBuilder(defaultPs).world(world).locationX(locationX).locationY(locationY).locationZ(locationZ).build();
 			}
-			catch (Exception e)
+			catch (Throwable e)
 			{
 				
 			}
@@ -90,7 +90,7 @@ public class TypePS extends TypeAbstract<PS>
 				String world = TypeWorldId.get().read(parts.get(3), sender);
 				return new PSBuilder(defaultPs).world(world).locationX(locationX).locationY(locationY).locationZ(locationZ).build();
 			}
-			catch (Exception e)
+			catch (Throwable e)
 			{
 				
 			}
@@ -104,7 +104,7 @@ public class TypePS extends TypeAbstract<PS>
 				double locationZ = TypeDouble.get().read(parts.get(2), sender);
 				return new PSBuilder(defaultPs).locationX(locationX).locationY(locationY).locationZ(locationZ).build();
 			}
-			catch (Exception e)
+			catch (Throwable e)
 			{
 				
 			}

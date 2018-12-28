@@ -74,7 +74,7 @@ public class PusherCollFlatfile extends Thread implements PusherColl
 				// We've been interrupted. Lets bail.
 				return;
 			}
-			catch (Exception e)
+			catch (Throwable e)
 			{
 				System.out.println("Pusher error for" + this.coll.getDebugName());
 				e.printStackTrace();

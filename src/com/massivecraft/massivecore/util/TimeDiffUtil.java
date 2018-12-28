@@ -84,7 +84,7 @@ public class TimeDiffUtil
 			{
 				count = Long.parseLong(countStringFixed);
 			}
-			catch (Exception e)
+			catch (Throwable e)
 			{
 				throw new Exception("\""+countString+"\" não é um número válido.");
 			}

@@ -128,7 +128,7 @@ public class MUtil
 			
 			ret.setAccessible(true);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			// If we fail we do so silently.
 			// This method is probably almost never going to be used anyways.
@@ -154,7 +154,7 @@ public class MUtil
 			{
 				playersObject = methodGetOnlinePlayers.invoke(null);
 			}
-			catch (Exception e)
+			catch (Throwable e)
 			{
 				e.printStackTrace();
 			}
@@ -263,7 +263,7 @@ public class MUtil
 		{
 			return UUID.fromString(string);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			return null;
 		}

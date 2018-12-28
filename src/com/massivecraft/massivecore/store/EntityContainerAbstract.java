@@ -197,7 +197,7 @@ public abstract class EntityContainerAbstract<E extends EntityInternal<E>> imple
 		{
 			return this.getEntityClass().newInstance();
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			e.printStackTrace();
 			

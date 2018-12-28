@@ -173,7 +173,7 @@ public abstract class AdapterMassiveX<T> implements JsonDeserializer<T>, JsonSer
 		{
 			return clazz.newInstance();
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw new RuntimeException(e);
 		}

@@ -27,7 +27,7 @@ public enum ServerType
 			Class.forName("cpw.mods.fml.common.FMLCommonHandler");
 			return FORGE;
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			return BUKKIT;
 		}

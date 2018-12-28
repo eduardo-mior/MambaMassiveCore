@@ -82,8 +82,8 @@ public class WebUtil
 		}
 		finally
 		{
-			try { is.close(); } catch (Exception ignored) {}
-			try { uc.disconnect(); } catch (Exception ignored) {}
+			try { is.close(); } catch (Throwable ignored) {}
+			try { uc.disconnect(); } catch (Throwable ignored) {}
 		}
 	}
 	
@@ -120,9 +120,9 @@ public class WebUtil
 		finally
 		{
 			// Closing BufferedReader does close InputStreamReader does close InputStream.
-			try { br.close(); } catch (Exception ignored) {}
+			try { br.close(); } catch (Throwable ignored) {}
 			// However documentation suggested we must disconnect the HttpURLConnection manually.
-			try { uc.disconnect(); } catch (Exception ignored) {}
+			try { uc.disconnect(); } catch (Throwable ignored) {}
 		}
 	}
 	
@@ -167,7 +167,7 @@ public class WebUtil
 			ctx.init(null, new TrustManager[]{ TRUSTING_TRUST_MANAGER }, null);
 			socketFactory = ctx.getSocketFactory();
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			e.printStackTrace();
 		}

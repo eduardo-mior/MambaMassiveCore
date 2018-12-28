@@ -38,7 +38,7 @@ public class ReflectionUtil
 			FIELD_DOT_MODIFIERS = Field.class.getDeclaredField("modifiers");
 			FIELD_DOT_MODIFIERS.setAccessible(true);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			e.printStackTrace();
 		}
@@ -62,7 +62,7 @@ public class ReflectionUtil
 			// http://stackoverflow.com/questions/2474017/using-reflection-to-change-static-final-file-separatorchar-for-unit-testing
 			FIELD_DOT_MODIFIERS.setInt(field, field.getModifiers() & ~Modifier.FINAL);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw asRuntimeException(e);
 		}
@@ -75,7 +75,7 @@ public class ReflectionUtil
 			// Mark as accessible using reflection.
 			method.setAccessible(true);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw asRuntimeException(e);
 		}
@@ -88,7 +88,7 @@ public class ReflectionUtil
 			// Mark as accessible using reflection.
 			constructor.setAccessible(true);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw asRuntimeException(e);
 		}
@@ -106,7 +106,7 @@ public class ReflectionUtil
 			makeAccessible(ret);
 			return ret;
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw asRuntimeException(e);
 		}
@@ -124,7 +124,7 @@ public class ReflectionUtil
 			getMethod(clazz, name, parameterTypes);
 			return true;
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			return false;
 		}
@@ -142,7 +142,7 @@ public class ReflectionUtil
 		{
 			return (T) method.invoke(target, arguments);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw asRuntimeException(e);
 		}
@@ -172,7 +172,7 @@ public class ReflectionUtil
 			makeAccessible(ret);
 			return ret;
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw asRuntimeException(e);
 		}
@@ -190,7 +190,7 @@ public class ReflectionUtil
 		{
 			return (T) constructor.newInstance(arguments);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw asRuntimeException(e);
 		}
@@ -218,7 +218,7 @@ public class ReflectionUtil
 		{
 			return (T) clazz.newInstance();
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw asRuntimeException(e);
 		}
@@ -261,7 +261,7 @@ public class ReflectionUtil
 			Method get = getMethod(clazz, "get");
 			return true;
 		}
-		catch (Exception ex)
+		catch (Throwable ex)
 		{
 			return false;
 		}
@@ -300,7 +300,7 @@ public class ReflectionUtil
 			makeAccessible(ret);
 			return ret;
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw asRuntimeException(e);
 		}
@@ -313,7 +313,7 @@ public class ReflectionUtil
 		{
 			return (T) field.get(object);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw asRuntimeException(e);
 		}
@@ -329,7 +329,7 @@ public class ReflectionUtil
 		{
 			field.set(object, value);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw asRuntimeException(e);
 		}

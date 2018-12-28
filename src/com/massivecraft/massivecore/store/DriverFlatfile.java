@@ -59,7 +59,7 @@ public class DriverFlatfile extends DriverAbstract
 		{
 			return DiscUtil.deleteRecursive(dbFlatfile.directory);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			return false;
 		}
@@ -229,7 +229,7 @@ public class DriverFlatfile extends DriverAbstract
 			watchService = FileSystems.getDefault().newWatchService();
 			ret = ! watchService.getClass().getName().equals("sun.nio.fs.PollingWatchService");
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			e.printStackTrace();
 		}
@@ -242,7 +242,7 @@ public class DriverFlatfile extends DriverAbstract
 					watchService.close();
 				}
 			}
-			catch (Exception e)
+			catch (Throwable e)
 			{
 				e.printStackTrace();
 			}

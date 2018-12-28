@@ -210,7 +210,7 @@ public class Metrics {
 			playerAmount = onlinePlayersMethod.getReturnType().equals(Collection.class)
 							   ? ((Collection<?>) onlinePlayersMethod.invoke(Bukkit.getServer())).size()
 							   : ((Player[]) onlinePlayersMethod.invoke(Bukkit.getServer())).length;
-		} catch (Exception e) {
+		} catch (Throwable e) {
 			playerAmount = Bukkit.getOnlinePlayers().size(); // Just use the new method if the Reflection failed
 		}
 		int onlineMode = Bukkit.getOnlineMode() ? 1 : 0;
@@ -270,7 +270,7 @@ public class Metrics {
 				try {
 					// Send the data
 					sendData(data);
-				} catch (Exception e) {
+				} catch (Throwable e) {
 					// Something went wrong! :(
 					if (logFailedRequests) {
 						plugin.getLogger().log(Level.WARNING, "Could not submit plugin stats of " + plugin.getName(), e);

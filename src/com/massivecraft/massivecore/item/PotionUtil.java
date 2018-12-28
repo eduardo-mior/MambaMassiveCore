@@ -29,7 +29,7 @@ public class PotionUtil
 			
 			return new PotionData(type, extended, upgraded);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			return null;
 		}

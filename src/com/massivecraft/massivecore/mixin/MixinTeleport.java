@@ -62,7 +62,7 @@ public class MixinTeleport extends Mixin
 			location = ps.asBukkitLocation();
 			
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw new TeleporterException(Txt.parse("§cNão foi possivel calcular a localização:§c %s", e.getMessage()));
 		}
@@ -83,7 +83,7 @@ public class MixinTeleport extends Mixin
 		{
 			velocity = ps.asBukkitVelocity();
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			return;
 		}
@@ -104,7 +104,7 @@ public class MixinTeleport extends Mixin
 		{
 			ps = destination.getPs(teleporteeId);
 		}
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			throw new TeleporterException(e.getMessage());
 		}
